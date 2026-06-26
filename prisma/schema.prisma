@@ -1,0 +1,64 @@
+// Prisma schema — stores Shopify OAuth sessions + merchant settings
+// Run: npx prisma migrate dev --name init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Required by @shopify/shopify-app-session-storage-prisma
+model Session {
+  id            String    @id
+  shop          String
+  state         String
+  isOnline      Boolean   @default(false)
+  scope         String?
+  expires       DateTime?
+  accessToken   String
+  userId        BigInt?
+  firstName     String?
+  lastName      String?
+  email         String?
+  accountOwner  Boolean   @default(false)
+  locale        String?
+  collaborator  Boolean?  @default(false)
+  emailVerified Boolean?  @default(false)
+}
+
+// One row per Shopify store that installs the app
+model MerchantStore {
+  id               String   @id @default(cuid())
+  shop             String   @unique
+  accessToken      String
+  widgetEnabled    Boolean  @default(true)
+  autoEmailEnabled Boolean  @default(true)
+  emailDelayDays   Int      @default(7)
+  plan             String   @default("free")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  reviewRequests ReviewRequest[]
+}
+
+// Tracks review request emails queued after order fulfillment
+model ReviewRequest {
+  id             String    @id @default(cuid())
+  shopDomain     String
+  orderId        String
+  orderNumber    String
+  customerEmail  String
+  customerName   String?
+  productHandles String
+  status         String    @default("pending")
+  sentAt         DateTime?
+  createdAt      DateTime  @default(now())
+
+  store MerchantStore @relation(fields: [shopDomain], references: [shop])
+
+  @@index([shopDomain])
+  @@index([orderId])
+}

@@ -1,0 +1,49 @@
+# ================================================================
+# Shopify App Configuration
+# After filling in your values, this file is read by the Shopify CLI
+# ================================================================
+
+name = "Rizzz Reviews"
+client_id = "YOUR_SHOPIFY_API_KEY_FROM_PARTNERS_DASHBOARD"
+handle = "rizzz-reviews"
+application_url = "https://YOUR_RAILWAY_OR_RENDER_URL.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "your-dev-store.myshopify.com"
+
+[access_scopes]
+scopes = "read_products,read_orders,write_script_tags,read_customers"
+
+[auth]
+redirect_urls = [
+  "https://YOUR_RAILWAY_OR_RENDER_URL.com/auth/callback",
+  "https://YOUR_RAILWAY_OR_RENDER_URL.com/auth/shopify/callback"
+]
+
+[webhooks]
+api_version = "2026-04"
+
+  [[webhooks.subscriptions]]
+  topics = ["orders/fulfilled"]
+  uri = "/webhooks/orders-fulfilled"
+
+  [[webhooks.subscriptions]]
+  topics = ["app/uninstalled"]
+  uri = "/webhooks/app-uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = ["shop/redact"]
+  uri = "/webhooks/shop-redact"
+
+  [[webhooks.subscriptions]]
+  topics = ["customers/redact"]
+  uri = "/webhooks/customers-redact"
+
+  [[webhooks.subscriptions]]
+  topics = ["customers/data_request"]
+  uri = "/webhooks/customers-data-request"
+
+[pos]
+embedded = false
