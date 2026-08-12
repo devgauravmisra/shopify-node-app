@@ -2,15 +2,14 @@
 // Merchant dashboard — shown inside Shopify admin after install
 // Uses Polaris (Shopify design system) + GraphQL Admin API
 
-import { useEffect } from "react";
 import { json } from "@remix-run/node";
 import { useLoaderData, useSubmit, useNavigation } from "@remix-run/react";
 import {
   Page, Layout, Card, BlockStack, InlineStack,
-  Text, Button, Banner, Badge, DataTable,
+  Text, Button, Badge, DataTable,
   Divider, Thumbnail, Link, EmptyState,
 } from "@shopify/polaris";
-import { TitleBar, useAppBridge } from "@shopify/app-bridge-react";
+import { TitleBar } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server.js";
 import { prisma } from "../db.server.js";
 

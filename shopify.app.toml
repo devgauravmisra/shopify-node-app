@@ -4,14 +4,14 @@
 # ================================================================
 
 name = "Rizzz Reviews"
-client_id = "YOUR_SHOPIFY_API_KEY_FROM_PARTNERS_DASHBOARD"
+client_id = "c96655ef1ee068e01532b48d62f16b90"
 handle = "rizzz-reviews"
 application_url = "https://YOUR_RAILWAY_OR_RENDER_URL.com"
 embedded = true
 
 [build]
 automatically_update_urls_on_dev = true
-dev_store_url = "your-dev-store.myshopify.com"
+dev_store_url = "test-rizzz.myshopify.com"
 
 [access_scopes]
 scopes = "read_products,read_orders,write_script_tags,read_customers"
