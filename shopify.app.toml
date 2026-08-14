@@ -4,7 +4,7 @@
 # ================================================================
 
 name = "Rizzz Reviews"
-client_id = "c96655ef1ee068e01532b48d62f16b90"
+client_id = "66759873db8683deef1e49496854ca98"
 handle = "rizzz-reviews"
 application_url = "https://shopify-node-app-rizzz.vercel.app"
 embedded = true
