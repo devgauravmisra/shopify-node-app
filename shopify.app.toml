@@ -6,7 +6,7 @@
 name = "Rizzz Reviews"
 client_id = "66759873db8683deef1e49496854ca98"
 handle = "rizzz-reviews"
-application_url = "shopify-node-app-rizz-4f6god817-rizzz8.vercel.app"
+application_url = "https://shopify-node-app-rizz-4f6god817-rizzz8.vercel.app"
 embedded = true
 
 [build]
