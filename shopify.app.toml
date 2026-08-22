@@ -6,7 +6,7 @@
 name = "Rizzz Reviews"
 client_id = "c96655ef1ee068e01532b48d62f16b90"
 handle = "rizzz-reviews"
-application_url = "https://shopify-node-app-rizz-osn07utlw-rizzz8.vercel.app"
+application_url = "https://shopify-node-app-czt9-7752zat9s-rizzz8.vercel.app"
 embedded = true
 
 [build]
@@ -18,8 +18,8 @@ scopes = "read_products,read_orders,write_script_tags,read_customers"
 
 [auth]
 redirect_urls = [
-  "https://shopify-node-app-rizz-osn07utlw-rizzz8.vercel.app/auth/callback",
-  "https://shopify-node-app-rizz-osn07utlw-rizzz8.vercel.app/auth/callback"
+  "https://shopify-node-app-czt9-7752zat9s-rizzz8.vercel.app/auth/callback",
+  "https://shopify-node-app-czt9-7752zat9s-rizzz8.vercel.app/auth/callback"
 ]
 
 [webhooks]
