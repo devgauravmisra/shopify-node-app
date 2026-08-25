@@ -19,7 +19,6 @@ scopes = "read_products,read_orders,write_script_tags,read_customers"
 [auth]
 redirect_urls = [
   "https://shopify-node-app-rizz.vercel.app/auth/callback",
-  "https://shopify-node-app-rizz.vercel.app/auth/callback"
 ]
 
 [webhooks]
