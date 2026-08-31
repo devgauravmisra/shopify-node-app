@@ -32,17 +32,5 @@ api_version = "2026-04"
   topics = ["app/uninstalled"]
   uri = "/webhooks/app-uninstalled"
 
-  [[webhooks.subscriptions]]
-  topics = ["shop/redact"]
-  uri = "/webhooks/shop-redact"
-
-  [[webhooks.subscriptions]]
-  topics = ["customers/redact"]
-  uri = "/webhooks/customers-redact"
-
-  [[webhooks.subscriptions]]
-  topics = ["customers/data_request"]
-  uri = "/webhooks/customers-data-request"
-
 [pos]
 embedded = false
