@@ -1,6 +1,7 @@
 {
   "name": "rizzz-reviews-shopify-app",
   "private": true,
+  "type": "module",
   "version": "1.0.0",
   "description": "Rizzz Reviews — Community-powered reviews for Shopify",
   "scripts": {
