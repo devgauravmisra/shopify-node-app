@@ -34,18 +34,6 @@ export const shopify = shopifyApp({
       deliveryMethod: DeliveryMethod.Http,
       callbackUrl:    "/webhooks/app-uninstalled",
     },
-    SHOP_REDACT: {
-      deliveryMethod: DeliveryMethod.Http,
-      callbackUrl:    "/webhooks/shop-redact",
-    },
-    CUSTOMERS_REDACT: {
-      deliveryMethod: DeliveryMethod.Http,
-      callbackUrl:    "/webhooks/customers-redact",
-    },
-    CUSTOMERS_DATA_REQUEST: {
-      deliveryMethod: DeliveryMethod.Http,
-      callbackUrl:    "/webhooks/customers-data-request",
-    },
   },
 
   hooks: {
