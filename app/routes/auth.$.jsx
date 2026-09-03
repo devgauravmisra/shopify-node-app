@@ -1,10 +1,9 @@
 import { authenticate } from "../shopify.server.js";
 
-export async function loader({ request }) {
-  await authenticate.admin(request);
-  return null;
+export function loader({ request }) {
+  return authenticate.admin(request);
 }
 
-export default function Auth() {
-  return null;
+export function action({ request }) {
+  return authenticate.admin(request);
 }
