@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = env("mysql://rizzz_s4xbaatdhr:Gauravmishra7@sg2plzcpnl506741.prod.sin2.secureserver.net:3306/rizz")
 }
 
 // Required by @shopify/shopify-app-session-storage-prisma
